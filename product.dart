@@ -1,18 +1,19 @@
 class Product {
-  late int id ;
-  late String productName;
-  late double price ;
-  late int stockqun;
+  int id;
+  String productName;
+  double price;
+  int stockqun;
+  String description;
 
-Product(this.id,this.price, this.productName, this.stockqun);
+  Product(
+      this.id, this.productName, this.price, this.stockqun, this.description);
 
-void updatestock(int quantity) {
+  void updateStock(int quantity) {
     stockqun += quantity;
   }
 
-@override
+  @override
   String toString() {
-    return 'Product(id: $id, name: $productName, price: $price, stock: $stockqun)';
+    return 'Product(id: $id, name: $productName, price: $price, stock: $stockqun, description: $description)';
   }
-
 }

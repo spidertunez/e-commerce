@@ -17,14 +17,13 @@ class Payment {
     this.timestamp,
   );
 
- 
   void processPayment() {
-    print('Processing payment of \$${amount} for Order ID ${order.order_id} using $paymentMethod...');
+    print(
+        'Processing payment of \$${amount} for Order ID ${order.orderId} using $paymentMethod...');
     status = 'Completed';
     print('Payment completed successfully.');
   }
 
-  
   void updateStatus(String newStatus) {
     status = newStatus;
     print('Payment status updated to $status.');
@@ -33,7 +32,7 @@ class Payment {
   String getPaymentDetails() {
     return '''
       Payment ID: $paymentId
-      Order ID: ${order.order_id}
+      Order ID: ${order.orderId}
       Amount: \$${amount}
       Payment Method: $paymentMethod
       Status: $status
