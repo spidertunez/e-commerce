@@ -112,7 +112,10 @@ void _checkout(Cart cart) {
   print('Order Summary:');
 
   print('Date and Time: ${DateTime.now()}');
-  print('Customer name:${Customer}');
+
+  Customer customer =
+      Customer("John Doe", 5123654, "john@example.com", "Manoura", 01265984323);
+  print('Customer info:${customer}');
   print('Cart: $cart');
   print('Total calculated: \$${total.toStringAsFixed(2)}');
   print('Payment amount: \$${payment.toStringAsFixed(2)}');
